@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1>CRUD</h1>
+        <div class="form">
+          <label for="name">
+            Product name:
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter name..."
+              required
+              autocomplete="off"
+            />
+
+            <p class="notError" id="errorName">
+              Invalid name! must start with a capital letter and at least 3
+              characters
+            </p>
+          </label>
+
+          <label for="price">
+            Product price:
+            <input
+              type="number"
+              name="price"
+              id="price"
+              placeholder="Enter price..."
+              required
+              autocomplete="off"
+            />
+
+            <p class="notError" id="errorPrice">
+              Invalid price! must be a number maximum 12 digits
+            </p>
+          </label>
+
+          <label for="category">
+            Product category:
+            <input
+              type="text"
+              list="categories"
+              name="category"
+              id="category"
+              placeholder="Enter category..."
+              required
+              autocomplete="off"
+            />
+
+            <datalist id="categories">
+              <option value="Tv"></option>
+              <option value="Mobile"></option>
+              <option value="Screens"></option>
+              <option value="Electronic"></option>
+            </datalist>
+
+            <p class="notError" id="errorCategory">
+              Invalid category! must be tv, mobile, screens or electronic
+            </p>
+          </label>
+
+          <label for="description">
+            Product description:
+            <textarea
+              name="description"
+              id="description"
+              placeholder="Enter description..."
+              rows="4"
+              required
+              autocomplete="off"
+            ></textarea>
+
+            <p class="notError" id="errorDesc">
+              Invalid description! must be a at least 3 characters
+            </p>
+          </label>
+
+          <label for="inputImage">
+            Product image:
+            <input type="file" multiple name="images" id="inputImage" />
+          </label>
+
+          <button id="addProduct">Add product</button>
+          <button id="updateProduct">Update product</button>
+        </div>
+      </div>
+
+      <div class="products" id="products">
+        <button class="deleteAll" id="deleteAll">Delete All</button>
+
+        <label for="search" class="search">
+          Search:
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search..."
+          />
+        </label>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="productsList">
+            <!-- Products will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

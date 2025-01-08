@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #000, rgb(37, 9, 63));
+  color: #000;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h1 {
+  margin-top: 20px;
+  color: rgb(37, 9, 63);
+  animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  opacity: 0;
+  animation: formFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+label {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  transform: scale(1.03);
+}
+
+details {
+  text-align: start;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 90%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
+}
+
+button:hover {
+  background-color: rgb(37, 9, 63);
+  transform: scale(1.05);
+}
+
+#updateProduct {
+  display: none;
+}
+
+.products {
+  width: 95%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.search{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  animation: tableFadeIn 1.5s ease-out;
+}
+
+@keyframes tableFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+th {
+  background-color: #000;
+  color: #fff;
+}
+
+.deleteAll {
+  width: 100%;
+}
+
+.deleteAll:hover {
+  transform: scale(1.03);
+  background-color: red;
+  animation: pulse 0.5s infinite;
+}
+
+.prodImage {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.prodImage:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit:hover {
+  background-color: rgb(37, 9, 63);
+  transform: scale(1.1);
+}
+
+.delete:hover {
+  background-color: red;
+  transform: scale(1.1);
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.is-valid {
+  border: 1px solid green;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+.error{
+  width: 100%;
+  text-align: start;
+  color: red;
+  font-size: 0.8rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.notError{
+  display: none;
+}
