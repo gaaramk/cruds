@@ -58,7 +58,7 @@ document.getElementById("deleteAll").addEventListener("click", function () {
 
 document
   .getElementById("search")
-  .addEventListener("input", displayDataAndSearch());
+  .addEventListener("input", displayDataAndSearch);
 
 function clearFields() {
   prodName.value = null;
@@ -199,7 +199,7 @@ function validatePrice() {
 prodCategory.addEventListener("input", validateCategory);
 function validateCategory() {
   var category = prodCategory.value;
-  var regex = /^(tv|mobile|screen|electonic)$/i;
+  var regex = /^(tv|mobile|screen|electronic)$/i;
   var errorCategory = document.getElementById("errorCategory");
 
   if (regex.test(category)) {
